@@ -1,17 +1,17 @@
-class solution:
-    def ifmapping(s1: str, s2: str) -> object:
-        if len(s1) != len(s2):
+s1 = input()
+s2 = input()
+
+def ifMapping(s1: str, s2: str) -> object:
+    if len(s1) != len(s2):
+        return False
+
+    d = {}
+    for i in range(len(s1)):
+        if s1[i] not in d:
+            d[s1[i]] = s2[i]
+        elif d[s1[i]] != s2[i]:
             return False
+    return True
 
-        d = {}
-        for i in range(len(s1)):
-            if s1[i] not in d:
-                d[s1[i]] = s2[i]
-            elif d[s1[i]] != s2[i]:
-                return False
-        return True
-
-    s1 = 'bar'
-    s2 = 'foo'
-    print (ifmapping(s1, s2))
+print(ifMapping(s1, s2))
 
