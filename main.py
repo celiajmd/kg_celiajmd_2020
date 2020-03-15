@@ -12,6 +12,6 @@ def ifMapping(s1: str, s2: str) -> object:
         elif d[s1[i]] != s2[i]:
             return False
     return True
-#！！！！
+
 print(ifMapping(s1, s2))
 
